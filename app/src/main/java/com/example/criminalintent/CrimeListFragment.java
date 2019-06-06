@@ -55,6 +55,14 @@ public class CrimeListFragment extends Fragment {
             mTitleTextView = itemView.findViewById(R.id.crime_title);
             mDateTextView = itemView.findViewById(R.id.crime_date);
             mSolvedImageView = itemView.findViewById(R.id.crime_solved);
+            itemView.setOnClickListener(this);
+            /*itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("CrimeHolder", "Element clicked");
+                    Toast.makeText(getActivity(), mCrime.getTitle() + " clicked!", Toast.LENGTH_SHORT).show();
+                }
+            });*/
         }
 
         public void bind(Crime crime) {
@@ -69,6 +77,7 @@ public class CrimeListFragment extends Fragment {
             Log.d("CrimeHolder", "Element clicked");
             Toast.makeText(getActivity(), mCrime.getTitle() + " clicked!", Toast.LENGTH_SHORT).show();
         }
+
     }
 
     private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder>{
