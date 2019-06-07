@@ -10,6 +10,7 @@ import android.util.Log;
 
 import java.util.UUID;
 
+@Deprecated
 public class CrimeActivity extends SingleFragmentActivity {
 
     private static final String EXTRA_CRIME_ID = "com.example.criminalintent.crime_id";
